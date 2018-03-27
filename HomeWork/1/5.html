@@ -8,6 +8,14 @@
 
 </head>
 <body>
-  <script src="5.js"></script>
+  <script>
+    var a = parseInt(prompt("Введите число А"));
+    var b = parseInt(prompt("Введите число Б"));
+    var c = parseInt(prompt("Введите число В"));
+    var flag;
+    if (a === b || a === c || b === c) flag = true;
+    else flag = false;
+    alert(flag);
+  </script>
 </body>
 </html>

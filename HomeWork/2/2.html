@@ -8,6 +8,18 @@
 
 </head>
 <body>
-  <script src="2.js"></script>
+  <script>
+    var a = prompt("Введите координаты вершины А по осям x, y, z через зяпятую и пробел");
+    var a = a.split(', ');
+    var b = prompt("Введите координаты вершины В по осям x, y, z через зяпятую и пробел");
+    var b = b.split(', ');
+    var c = prompt("Введите координаты вершины С по осям x, y, z через зяпятую и пробел");
+    var c = c.split(', ');
+    var ab = Math.pow(b[0]-a[0], 2) + Math.pow(b[1]-a[1], 2) + Math.pow(b[2]-a[2], 2);
+    var ac = Math.pow(c[0]-a[0], 2) + Math.pow(c[1]-a[1], 2) + Math.pow(c[2]-a[2], 2);
+    var bc = Math.pow(c[0]-b[0], 2) + Math.pow(c[1]-b[1], 2) + Math.pow(c[2]-b[2], 2);
+    if (ab + ac === bc || ab + bc === ac || ac + bc === ab) alert ("Прямоугольный!");
+    else alert("Не прямоугольный");
+  </script>
 </body>
 </html>

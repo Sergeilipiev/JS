@@ -8,6 +8,17 @@
 
 </head>
 <body>
-  <script src="4.js"></script>
+  <script>
+    var a = parseInt(prompt("Введите единицу измерения:\n1. Дециметр\n2. Километр\n3. Метр\n4. Миллиметр\n5. Сантиметр"));
+    var b = parseInt(prompt("Введите длину отрезка \"L\""));
+    var x;
+    if (a === 1) x = b / 10;
+    else if (a === 2) x = b * 1000;
+    else if (a === 3) x = b;
+    else if (a === 4) x = b / 1000;
+    else if (a === 5) x = b / 100;
+    else alert("Введено не верное число");
+    alert("Отрезок равен " + x + " м");
+  </script>
 </body>
 </html>
