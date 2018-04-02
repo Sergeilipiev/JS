@@ -12,15 +12,13 @@
     // в один массив C так, чтобы в массиве остались уникальные
     // (неповторяющиеся) элементы.
     // Например: A = [1,2], B = [2,3] получим С = [1, 2, 3].
-    let a = [2,7,3,6,8];
+    let a = [2,7,3,2,8];
     let b = [9,0,3,1,2];
-    let c = b;
-    for (i = 0; i < a.length; i++) {
-      for (j = 0; j < c.length; j++) {
-        if (a[i] === c[j]) c.splice(j, 1);
-      }
+    let c = a.concat(b);
+    c.sort();
+    for (let i = 0; i < c.length; i++) {
+      if (c[i] == c[i+1]) delete(c[i]);
     }
-    c = a.concat(c);
     console.log(c);
   </script>
 </body>
