@@ -17,7 +17,10 @@
     let c = a.concat(b);
     c.sort();
     for (let i = 0; i < c.length; i++) {
-      if (c[i] == c[i+1]) delete(c[i]);
+      if (c[i] == c[i+1]) {
+        c.splice(i,1);
+        i--;
+      }
     }
     console.log(c);
   </script>
