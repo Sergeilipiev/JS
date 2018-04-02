@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //   Задан массив - [12,4,3,10,1,20]
+    // необходимо отсортировать его в порядке возрастания,
+    // при этом не использовать готовый метод sort и методы разобранные на занятии.
+    let arr = [12,4,3,10,1,20];
+    let n = arr.length;
+    for (var i = 0; i < n; i++){
+      var v = arr[ i ], j = i-1;
+       while (j >= 0 && arr[j] > v){
+        arr[j+1] = arr[j];
+        j--;
+      }
+       arr[j+1] = v;
+    }
+    console.log(arr);
+  </script>
+</body>
+</html>

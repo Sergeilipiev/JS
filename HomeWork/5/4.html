@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Напишите функцию (), которая в зависимости от переданных
+    // в нее целочисленных аргументов "количество дней", будет выводить
+    // слово "день" в нужно форме ("если передали - 1, то 1 день",
+    // "если передали - 3, то 3 дня" и т.д).
+    function days (a) {
+      let days = String(parseInt(a));
+      let day1 = "день";
+      let day2_4 = "дня";
+      let day5_10 = "дней";
+      let x = parseInt(days.length-1);
+      if (days < 11 || days > 20) {
+        if (days[x] == 1) return day1;
+        else if (days[x] >= 2 && days[x] <=4) return day2_4;
+        else if (days[x] >= 5 && days[x] <=9 || days[x] == 0) return day5_10;
+        else return "это не число";
+      }
+      else if (days > 10 || days < 20) return day5_10;
+      else return "это не число";
+  }
+  num = "41fcfc";
+  console.log(parseInt(num) + " " + days(num));
+  </script>
+</body>
+</html>

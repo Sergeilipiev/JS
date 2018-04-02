@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    td {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    //   Одномерным массивом задана доска 3 на 3
+    // var area = [ null, null, null, null, null, null, null, null, null ]
+    //
+    // Необходимо сформировать игровое поле состоящее из квадратов для крестиков-ноликов  в HTML.
+    //
+    // При появлении в массиве 0-ля рисовать нолик , 1-цы крестик
+    //
+    // Пример:  [ 1, null, 0, null, 1, null, null, null, null ] на поле 2-а крестика, и 1-н нолик.
+    let area = [ 1, null, 0, 1, null, 1, null, 0, 0 ];
+    document.write("<table>");
+    for (i = 0; i < area.length; i++) {
+      if (i%3 === 0) document.write("<tr>");
+      if (area[i] === 1) document.write ("<td>X</td>");
+      else if (area[i] === 0) document.write ("<td>0</td>");
+      else document.write ("<td></td>");
+      if (i%3 === 0) document.write("</>");
+    }
+    document.write("</table>");
+  </script>
+</body>
+</html>
