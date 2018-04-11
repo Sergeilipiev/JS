@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  </style>
+  <div></div>
+  <div></div>
+  <div></div>
+  <script>
+    let div = document.getElementsByTagName('div');
+      div[0].style.background = "red";
+    function signal () {
+        div[0].style.background = "red";
+        function hide (color1, color2, d1, d2){
+          d1.style.background = color1;
+          d2.style.background = color2;
+      }
+        setTimeout(hide, 2000, "white", "yellow", div[0], div[1]);
+        setTimeout(hide, 4000, "white", "green", div[1], div[2]);
+        setTimeout(hide, 6000, "white", "yellow", div[2], div[1]);
+        setTimeout(hide, 8000, "white", "red", div[1], div[0]);
+    }
+    signal();
+    setInterval(signal, 8000);
+  </script>
+</body>
+</html>

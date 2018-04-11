@@ -17,20 +17,23 @@
           let n = getSize();
           for (let i = 1; i <= n*n; i++) {
             arr.push(i);
-          }
+          };
+
+
+          
           arr.sort(shuffle);
-          for (let j = 0; i <= n*n; i++) {
+          for (let j = 0; i < n*n; i++) {
             let cell = document.createElement('div');
             cell.innerText = arr[j];
             cell.style.color = `rgb(${rand(0, 200)},${rand(0, 200)},${rand(0, 200)})`;
-            cell.style.fontSize = (rand(10, 100)/100) + 'vh';
+            cell.style.fontSize = (rand(10, 100)/n) + 'vh';
             cell.style.height = (100/n) + 'vh';
             cell.style.width = (100/n) + 'vw';
             cell.style.border = '1px solif #000';
             cell.style. textAlign = 'center';
             parentEl.appendChild(cell);
           }
-      };
+        }
 
       }
     }());
