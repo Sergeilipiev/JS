@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Создать шаблон объектов «Товар».
+    // Свойства товара «Имя» и «Цена».
+    // Создать шаблон объектов «Корзина товаров».
+    // Приватные свойства объекта:
+    // - Массив товаров;
+    // - Количество товаров;
+    // - Сумма товаров.
+    // Методы объекта:
+    // - Добавить товар;
+    // - Вернуть сумму товара;
+    // - Вернуть количество товара.
+
+    function Storage(name, price) {
+      this.set = function (name, price) {
+        this.name = name;
+        this.price = price;
+      };
+    };
+    function Recycle() {
+      this.items = [];
+      this.qItems = 0;
+      this.sItems = 0;
+      this.add = function (good) {
+        this.items[good.name] = good.price;
+        this.qItems+=1;
+        this.sItems+=parseInt(good.price);
+      };
+      this.sum = function () {
+        return this.sItems;
+      };
+      this.q = function () {
+        return this.qItems;
+      };
+    };
+    var item1 = new Storage();
+    var item2 = new Storage();
+    var item3 = new Storage();
+    item1.set('Робот Антошка','11700');
+    item2.set('Робот Павел','15400');
+    item3.set('Робот Walli','158405');
+    var re = new Recycle();
+    re.add(item1);
+    re.add(item2);
+    re.add(item3);
+    console.log (re.sum());
+    console.log (re.q());
+
+
+
+  </script>
+</body>
+</html>
